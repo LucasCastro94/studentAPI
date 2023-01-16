@@ -33,11 +33,10 @@ public class StudentDTO {
     private String enrolled;
 
     @Valid
-    @NotBlank
+
     private List<Classes> classes;
 
     @Valid
-    @NotBlank
     private List<Teacher> teachers;
 
 
