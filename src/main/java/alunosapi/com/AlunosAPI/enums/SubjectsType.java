@@ -1,18 +1,15 @@
 package alunosapi.com.AlunosAPI.enums;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
+@AllArgsConstructor
 public enum SubjectsType {
     MATEMATICA("Matematíca"),
     PORTUGUES("Português"),
     GEOGRAFIA("Geografia");
-
-    SubjectsType(String description) {
-        this.description = description;
-    }
 
     private String description;
 
