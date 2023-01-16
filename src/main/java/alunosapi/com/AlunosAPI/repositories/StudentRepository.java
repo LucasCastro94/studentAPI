@@ -1,4 +1,7 @@
 package alunosapi.com.AlunosAPI.repositories;
 
-public class StudentRepository {
+import alunosapi.com.AlunosAPI.entities.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudentRepository extends JpaRepository<Student,Long> {
 }
