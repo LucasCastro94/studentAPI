@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class StudentNotFoundException extends Exception {
     public StudentNotFoundException(Long id)
     {
-        super(String.format("Person with ID %s not found!", id));
+        super(String.format("Student with ID %s not found!", id));
     }
 }

@@ -23,7 +23,7 @@ public class StudentService {
         Student student = studentMapper.toModel(studentDTO);
         Student savedStudent = studentRepository.save(student);
 
-        MessageResponseDTO messageResponseDTO = createMessageResponse("Person successfully created with ID",savedStudent.getId());
+        MessageResponseDTO messageResponseDTO = createMessageResponse("Student successfully created with ID",savedStudent.getId());
 
         return messageResponseDTO;
     }
@@ -43,14 +43,14 @@ public class StudentService {
     }
 
 
-    public MessageResponseDTO update(Long id, StudentDTO personDTO) throws StudentNotFoundException {
+    public MessageResponseDTO update(Long id, StudentDTO StudentDTO) throws StudentNotFoundException {
         studentRepository.findById(id)
                 .orElseThrow(() -> new StudentNotFoundException(id)); // caso não acha essa pessoa lance a exceção
 
-        Student updatedPerson = studentMapper.toModel(personDTO);
-        Student savedPerson = studentRepository.save(updatedPerson);
+        Student updatedStudent = studentMapper.toModel(StudentDTO);
+        Student savedStudent = studentRepository.save(updatedStudent);
 
-        MessageResponseDTO messageResponse = createMessageResponse("Person successfully updated with ID ", savedPerson.getId());
+        MessageResponseDTO messageResponse = createMessageResponse("Student successfully updated with ID ", savedStudent.getId());
 
         return messageResponse;
     }
